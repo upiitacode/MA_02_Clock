@@ -3,7 +3,7 @@
  * Auto generated Run-Time-Environment Component Configuration File
  *      *** Do not modify ! ***
  *
- * Project: 'Cpp_03_RTOS' 
+ * Project: 'MA_02_Clock' 
  * Target:  'Target 1' 
  */
 

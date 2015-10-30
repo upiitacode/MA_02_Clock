@@ -47,7 +47,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\Objects\</OutputDirectory>
-          <OutputName>Cpp_03_RTOS</OutputName>
+          <OutputName>MA_02_Clock</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>0</CreateHexFile>
@@ -406,27 +406,135 @@
       </TargetOption>
       <Groups>
         <Group>
-          <GroupName>Source Group 1</GroupName>
+          <GroupName>application</GroupName>
           <Files>
             <File>
               <FileName>main.cc</FileName>
               <FileType>8</FileType>
               <FilePath>..\source\main.cc</FilePath>
             </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>other</GroupName>
+          <Files>
             <File>
-              <FileName>retarget_stm32f3.cc</FileName>
-              <FileType>8</FileType>
-              <FilePath>..\retarget\source\retarget_stm32f3.cc</FilePath>
+              <FileName>SPL_STM32F302x8.lib</FileName>
+              <FileType>4</FileType>
+              <FilePath>..\STM32F30x_StdPeriph_Driver\SPL_STM32F302x8.lib</FilePath>
             </File>
+            <File>
+              <FileName>delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\delay.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>2</IncludeInBuild>
+                  <AlwaysBuild>2</AlwaysBuild>
+                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>1</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>2</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <useXO>2</useXO>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>serial</GroupName>
+          <Files>
             <File>
               <FileName>serial_stream.cc</FileName>
               <FileType>8</FileType>
               <FilePath>..\retarget\source\serial_stream.cc</FilePath>
             </File>
             <File>
-              <FileName>SPL_STM32F302x8.lib</FileName>
-              <FileType>4</FileType>
-              <FilePath>..\STM32F30x_StdPeriph_Driver\SPL_STM32F302x8.lib</FilePath>
+              <FileName>serial_stream_stm32f3.cc</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\retarget\source\serial_stream_stm32f3.cc</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>timer</GroupName>
+          <Files>
+            <File>
+              <FileName>timer_15.cc</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\source\timer_15.cc</FilePath>
+            </File>
+            <File>
+              <FileName>timedclock.cc</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\source\timedclock.cc</FilePath>
+            </File>
+            <File>
+              <FileName>SerialShifter.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\SerialShifter.c</FilePath>
+            </File>
+            <File>
+              <FileName>Clock.cc</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\source\Clock.cc</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>segmentDisplayPanel</GroupName>
+          <Files>
+            <File>
+              <FileName>PanelShifterB.cc</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\source\PanelShifterB.cc</FilePath>
+            </File>
+            <File>
+              <FileName>PanelSerializer.cc</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\source\PanelSerializer.cc</FilePath>
+            </File>
+            <File>
+              <FileName>PanelDriver.cc</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\source\PanelDriver.cc</FilePath>
+            </File>
+            <File>
+              <FileName>PanelCharacterMap.cc</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\source\PanelCharacterMap.cc</FilePath>
             </File>
           </Files>
         </Group>
